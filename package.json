@@ -1,0 +1,21 @@
+{
+  "name": "ats-resume-scorer",
+  "version": "1.0.0",
+  "description": "AI-Powered ATS Resume Scorer & Job Matcher",
+  "scripts": {
+    "install-server": "cd server && npm install",
+    "install-client": "cd client && npm install",
+    "install-all": "npm run install-server && npm run install-client",
+    "server": "cd server && npm start",
+    "client": "cd client && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "cd client && npm run build",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": ["ats", "resume", "job-matcher", "mern"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
