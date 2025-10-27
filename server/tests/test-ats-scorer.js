@@ -36,7 +36,7 @@ Problem-solving, Leadership, Communication, Teamwork
 
 // Test ATS Score Calculation
 console.log('Test 1: Calculating ATS Score');
-console.log('=' .repeat(50));
+console.log('='.repeat(50));
 const analysis = calculateATSScore(sampleResume);
 console.log(`ATS Score: ${analysis.score}/100`);
 console.log(`Total Words: ${analysis.totalWords}`);
@@ -47,14 +47,14 @@ console.log('');
 
 // Test Skill Extraction
 console.log('Test 2: Extracting Skills');
-console.log('=' .repeat(50));
+console.log('='.repeat(50));
 const skills = extractSkills(sampleResume);
 console.log(`Extracted Skills: ${skills.join(', ')}`);
 console.log('');
 
 // Test Improvement Suggestions
 console.log('Test 3: Generating Improvements');
-console.log('=' .repeat(50));
+console.log('='.repeat(50));
 const improvements = generateImprovements(analysis, sampleResume);
 console.log('Suggestions:');
 improvements.forEach((imp, idx) => {
@@ -70,7 +70,7 @@ Email: john@email.com
 `;
 
 console.log('Test 4: Testing with Poor Resume');
-console.log('=' .repeat(50));
+console.log('='.repeat(50));
 const poorAnalysis = calculateATSScore(poorResume);
 console.log(`ATS Score: ${poorAnalysis.score}/100`);
 console.log(`Matched Keywords: ${poorAnalysis.matched.length}`);
@@ -82,6 +82,6 @@ poorImprovements.forEach((imp, idx) => {
 console.log('');
 
 // Test Summary
-console.log('=' .repeat(50));
+console.log('='.repeat(50));
 console.log('All Tests Completed Successfully! ✓');
-console.log('=' .repeat(50));
+console.log('='.repeat(50));
