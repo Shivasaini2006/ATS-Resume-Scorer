@@ -1,16 +1,16 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import WaveBackground from './components/WaveBackground'
-import Home from './pages/Home'
-import Upload from './pages/Upload'
-import Results from './pages/Results'
+import CinematicBackground from './components/CinematicBackground'
+import Home from './context/pages/Home'
+import Upload from './context/pages/Upload'
+import Results from './context/pages/Results'
 
 export default function App(){
   return (
     <div className="min-h-screen">
-      {/* animated background placed behind UI - does not change any layout or content */}
-      <WaveBackground />
+      {/* Cinematic Spider-Man themed background - high-tech, mysterious, elegant */}
+      <CinematicBackground />
       <Navbar />
       <main className="container mx-auto px-6 py-12">
         <Routes>
