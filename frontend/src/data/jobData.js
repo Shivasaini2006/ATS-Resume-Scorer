@@ -50,6 +50,15 @@ export const jobCategories = [
   'Management Consultant',
   'Scrum Master',
   'Agile Coach',
+  'Program Manager',
+  'Chief Operating Officer',
+  'General Manager',
+  'Business Development Executive',
+  'Supply Chain Manager',
+  'Procurement Manager',
+  'Quality Assurance Manager',
+  'Risk Manager',
+  'Change Management Specialist',
   
   // Finance & Accounting
   'Financial Analyst',
@@ -59,6 +68,14 @@ export const jobCategories = [
   'Tax Consultant',
   'Auditor',
   'Budget Analyst',
+  'Controller',
+  'Chief Financial Officer',
+  'Treasury Analyst',
+  'Credit Analyst',
+  'Payroll Specialist',
+  'Bookkeeper',
+  'Cost Accountant',
+  'Equity Research Analyst',
   
   // HR & Recruitment
   'HR Manager',
@@ -66,12 +83,22 @@ export const jobCategories = [
   'Talent Acquisition Specialist',
   'HR Business Partner',
   'Training Specialist',
+  'Compensation & Benefits Manager',
+  'Organizational Development Specialist',
+  'Employee Relations Manager',
+  'Payroll Manager',
+  'HR Generalist',
+  'Learning & Development Manager',
+  'Diversity & Inclusion Manager',
   
   // Customer Service
   'Customer Success Manager',
   'Customer Support Representative',
   'Technical Support Engineer',
   'Client Relations Manager',
+  'Call Center Manager',
+  'Customer Experience Manager',
+  'Service Desk Analyst',
   
   // Healthcare
   'Nurse',
@@ -91,15 +118,74 @@ export const jobCategories = [
   'Paralegal',
   'Legal Advisor',
   'Compliance Officer',
+  'Corporate Counsel',
+  'Contract Manager',
+  'Legal Assistant',
+  'Intellectual Property Specialist',
   
-  // Others
+  // Administrative & Office
   'Administrative Assistant',
   'Executive Assistant',
   'Office Manager',
   'Virtual Assistant',
+  'Receptionist',
+  'Data Entry Specialist',
+  'Office Coordinator',
+  'Personal Assistant',
+  'Scheduler',
+  
+  // Communication & PR
   'Copywriter',
   'Technical Writer',
-  'Translator'
+  'Translator',
+  'Public Relations Manager',
+  'Communications Manager',
+  'Media Relations Specialist',
+  'Corporate Communications Specialist',
+  'Internal Communications Manager',
+  'Content Strategist',
+  'Editor',
+  'Journalist',
+  'Speech Writer',
+  
+  // Real Estate & Property
+  'Real Estate Agent',
+  'Property Manager',
+  'Leasing Consultant',
+  'Real Estate Analyst',
+  'Facilities Manager',
+  
+  // Retail & E-commerce
+  'Retail Manager',
+  'Store Manager',
+  'Merchandiser',
+  'E-commerce Manager',
+  'Inventory Manager',
+  'Category Manager',
+  'Retail Buyer',
+  
+  // Hospitality & Tourism
+  'Hotel Manager',
+  'Event Planner',
+  'Travel Coordinator',
+  'Restaurant Manager',
+  'Catering Manager',
+  'Guest Relations Manager',
+  
+  // Insurance
+  'Insurance Agent',
+  'Claims Adjuster',
+  'Underwriter',
+  'Insurance Broker',
+  'Risk Analyst',
+  
+  // Consulting
+  'Management Consultant',
+  'IT Consultant',
+  'Business Consultant',
+  'Financial Consultant',
+  'HR Consultant',
+  'Marketing Consultant'
 ];
 
 export const jobAnalytics = {
@@ -302,6 +388,158 @@ export const jobAnalytics = {
     openings: '25,000+',
     competition: 'High',
     skills: ['Video Production', 'Photography', 'Copywriting', 'Social Media', 'Content Strategy', 'Adobe Creative Suite', 'SEO']
+  },
+  'Executive Assistant': {
+    demand: 'High',
+    avgSalary: '$50,000 - $85,000',
+    growth: '+9%',
+    openings: '30,000+',
+    competition: 'Medium',
+    skills: ['Calendar Management', 'Microsoft Office', 'Communication', 'Organization', 'Meeting Coordination', 'Travel Planning', 'Confidentiality', 'Time Management']
+  },
+  'Operations Manager': {
+    demand: 'High',
+    avgSalary: '$70,000 - $110,000',
+    growth: '+12%',
+    openings: '28,000+',
+    competition: 'Medium',
+    skills: ['Process Improvement', 'Team Leadership', 'Budget Management', 'Supply Chain', 'Project Management', 'Analytics', 'Inventory Management', 'Vendor Relations']
+  },
+  'Accountant': {
+    demand: 'High',
+    avgSalary: '$55,000 - $90,000',
+    growth: '+11%',
+    openings: '40,000+',
+    competition: 'Medium',
+    skills: ['Financial Reporting', 'QuickBooks', 'Excel', 'Tax Preparation', 'Accounts Payable', 'Accounts Receivable', 'General Ledger', 'GAAP']
+  },
+  'Recruiter': {
+    demand: 'Medium',
+    avgSalary: '$50,000 - $80,000',
+    growth: '+10%',
+    openings: '35,000+',
+    competition: 'Medium',
+    skills: ['Talent Sourcing', 'Interviewing', 'ATS Systems', 'LinkedIn Recruiting', 'Negotiation', 'Candidate Assessment', 'Employer Branding', 'Onboarding']
+  },
+  'Office Manager': {
+    demand: 'Medium',
+    avgSalary: '$45,000 - $70,000',
+    growth: '+8%',
+    openings: '32,000+',
+    competition: 'Low',
+    skills: ['Office Administration', 'Vendor Management', 'Budget Tracking', 'Scheduling', 'Microsoft Office', 'Communication', 'Problem Solving', 'Multitasking']
+  },
+  'Customer Success Manager': {
+    demand: 'High',
+    avgSalary: '$65,000 - $100,000',
+    growth: '+15%',
+    openings: '22,000+',
+    competition: 'Medium',
+    skills: ['Client Relationship', 'Account Management', 'CRM', 'Customer Retention', 'Data Analysis', 'Communication', 'Problem Solving', 'Product Knowledge']
+  },
+  'Sales Representative': {
+    demand: 'High',
+    avgSalary: '$45,000 - $85,000',
+    growth: '+12%',
+    openings: '50,000+',
+    competition: 'Medium',
+    skills: ['Sales Techniques', 'Lead Generation', 'CRM', 'Negotiation', 'Product Knowledge', 'Cold Calling', 'Presentation Skills', 'Closing Deals']
+  },
+  'Business Development Manager': {
+    demand: 'High',
+    avgSalary: '$75,000 - $120,000',
+    growth: '+14%',
+    openings: '25,000+',
+    competition: 'Medium',
+    skills: ['Strategic Planning', 'Market Research', 'Sales Strategy', 'Partnership Development', 'Negotiation', 'CRM', 'Networking', 'Revenue Growth']
+  },
+  'Compliance Officer': {
+    demand: 'Medium',
+    avgSalary: '$65,000 - $105,000',
+    growth: '+13%',
+    openings: '15,000+',
+    competition: 'Medium',
+    skills: ['Regulatory Compliance', 'Risk Assessment', 'Policy Development', 'Auditing', 'Legal Research', 'Report Writing', 'Ethics', 'Industry Regulations']
+  },
+  'Paralegal': {
+    demand: 'Medium',
+    avgSalary: '$50,000 - $75,000',
+    growth: '+9%',
+    openings: '20,000+',
+    competition: 'Medium',
+    skills: ['Legal Research', 'Document Drafting', 'Case Management', 'Legal Writing', 'Court Filing', 'Client Communication', 'Legal Software', 'Litigation Support']
+  },
+  'Public Relations Manager': {
+    demand: 'Medium',
+    avgSalary: '$60,000 - $95,000',
+    growth: '+11%',
+    openings: '12,000+',
+    competition: 'Medium',
+    skills: ['Media Relations', 'Press Releases', 'Crisis Management', 'Brand Management', 'Event Planning', 'Communication Strategy', 'Stakeholder Management', 'Public Speaking']
+  },
+  'Event Planner': {
+    demand: 'Medium',
+    avgSalary: '$45,000 - $75,000',
+    growth: '+10%',
+    openings: '15,000+',
+    competition: 'Medium',
+    skills: ['Event Coordination', 'Budget Management', 'Vendor Negotiation', 'Timeline Management', 'Client Relations', 'Problem Solving', 'Creativity', 'Marketing']
+  },
+  'Real Estate Agent': {
+    demand: 'Medium',
+    avgSalary: '$40,000 - $100,000',
+    growth: '+9%',
+    openings: '30,000+',
+    competition: 'High',
+    skills: ['Sales', 'Negotiation', 'Market Analysis', 'Client Relations', 'Property Valuation', 'Marketing', 'Networking', 'Contract Knowledge']
+  },
+  'Property Manager': {
+    demand: 'Medium',
+    avgSalary: '$50,000 - $80,000',
+    growth: '+8%',
+    openings: '18,000+',
+    competition: 'Medium',
+    skills: ['Tenant Relations', 'Lease Administration', 'Property Maintenance', 'Budget Management', 'Conflict Resolution', 'Marketing', 'Legal Compliance', 'Rent Collection']
+  },
+  'Supply Chain Manager': {
+    demand: 'High',
+    avgSalary: '$70,000 - $115,000',
+    growth: '+13%',
+    openings: '20,000+',
+    competition: 'Medium',
+    skills: ['Logistics', 'Inventory Management', 'Procurement', 'Vendor Management', 'SAP', 'Data Analysis', 'Negotiation', 'Supply Chain Optimization']
+  },
+  'Training Specialist': {
+    demand: 'Medium',
+    avgSalary: '$55,000 - $85,000',
+    growth: '+10%',
+    openings: '16,000+',
+    competition: 'Medium',
+    skills: ['Instructional Design', 'Curriculum Development', 'Presentation Skills', 'LMS', 'Assessment Design', 'Training Delivery', 'Communication', 'E-Learning']
+  },
+  'Brand Manager': {
+    demand: 'Medium',
+    avgSalary: '$65,000 - $100,000',
+    growth: '+12%',
+    openings: '14,000+',
+    competition: 'Medium',
+    skills: ['Brand Strategy', 'Market Research', 'Campaign Management', 'Analytics', 'Creative Direction', 'Budget Management', 'Consumer Insights', 'Product Launch']
+  },
+  'Account Executive': {
+    demand: 'High',
+    avgSalary: '$55,000 - $90,000',
+    growth: '+11%',
+    openings: '35,000+',
+    competition: 'Medium',
+    skills: ['Client Management', 'Sales', 'Relationship Building', 'CRM', 'Presentation Skills', 'Negotiation', 'Account Planning', 'Revenue Growth']
+  },
+  'Administrative Assistant': {
+    demand: 'High',
+    avgSalary: '$35,000 - $55,000',
+    growth: '+7%',
+    openings: '45,000+',
+    competition: 'Low',
+    skills: ['Microsoft Office', 'Data Entry', 'Scheduling', 'Filing', 'Communication', 'Customer Service', 'Organization', 'Email Management']
   }
 };
 

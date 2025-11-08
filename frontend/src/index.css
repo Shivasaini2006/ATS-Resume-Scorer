@@ -133,6 +133,13 @@ body{
   100% { transform: translateX(100%) rotate(45deg); }
 }
 
+/* Gradient shift animation for "Score It" title */
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 /* Animated glowing pulse - Golden energy */
 .pulse-ring{
   position: relative;

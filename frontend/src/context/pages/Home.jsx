@@ -11,17 +11,36 @@ export default function Home(){
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="flex justify-center mb-8"
+        className="flex justify-center mb-4"
       >
         <img 
           src={logo1} 
-          alt="ATS Resume Scorer Logo" 
+          alt="Score It Logo" 
           className="h-32 md:h-40 w-auto"
           style={{
             filter: 'drop-shadow(0 0 30px rgba(255, 215, 0, 0.5))',
           }}
         />
       </motion.div>
+
+      {/* Animated "Score It" Title */}
+      <motion.h1
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.2, duration: 0.6 }}
+        className="text-6xl md:text-7xl font-extrabold mb-6"
+        style={{
+          background: 'linear-gradient(90deg, #FFD700, #FFF44F, #FFD700, #FFF44F)',
+          backgroundSize: '200% auto',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text',
+          animation: 'gradient-shift 3s ease infinite',
+          textShadow: '0 0 40px rgba(255, 215, 0, 0.4)',
+        }}
+      >
+        Score It
+      </motion.h1>
       
       <motion.div
         initial={{ opacity: 0 }}
@@ -76,15 +95,9 @@ export default function Home(){
             </div>
           </div>
 
-          <div className="flex justify-center gap-4">
+          <div className="flex justify-center">
             <Link to="/upload" className="btn-neon pulse-ring">
               🚀 Get Started
-            </Link>
-            <Link 
-              to="/upload" 
-              className="px-8 py-4 bg-white/5 border border-white/20 rounded-full text-white hover:bg-white/10 transition-all duration-300 font-semibold"
-            >
-              Learn More
             </Link>
           </div>
         </div>
