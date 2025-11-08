@@ -11,7 +11,6 @@ export default function App(){
     <div className="min-h-screen">
       {/* Cinematic Spider-Man themed background - high-tech, mysterious, elegant */}
       <CinematicBackground />
-      <Navbar />
       <main className="container mx-auto px-6 py-12">
         <Routes>
           <Route path="/" element={<Home/>} />
