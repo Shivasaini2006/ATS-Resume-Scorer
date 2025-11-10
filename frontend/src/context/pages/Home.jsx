@@ -50,11 +50,7 @@ export default function Home(){
         <p className="text-2xl md:text-3xl font-semibold text-white/90 mb-4">
           AI Resume & Job Matcher
         </p>
-        <p className="text-lg text-white/60 max-w-2xl mx-auto mb-12 leading-relaxed">
-          Upload your resume and paste a job description to see how well they match.
-          <br />
-          <span className="text-glow-red font-medium">Powered by intelligent ATS scoring</span>
-        </p>
+        
       </motion.div>
 
       {/* CTA Card with enhanced cinematic styling */}

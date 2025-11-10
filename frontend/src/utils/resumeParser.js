@@ -156,44 +156,48 @@ export function extractSkills(text, requiredSkills = []) {
     // Get all possible variations for this skill
     const variations = getAllSkillVariations(skillLower);
     
-    // Try to match in skills section first
+    // Try to match in skills section first using stricter whole-word / token-aware regex
     for (const variation of variations) {
-      // Method 1: Exact word boundary match (most accurate)
-      const wordBoundaryPattern = new RegExp(`\\b${escapeRegex(variation)}\\b`, 'i');
-      if (wordBoundaryPattern.test(normalizedText)) {
-        found = true;
-        matchedVia = variation;
-        matchLocation = 'Skills Section';
-        break;
-      }
-      
-      // Method 2: Simple includes (for compound terms)
-      if (normalizedText.includes(variation.toLowerCase())) {
-        found = true;
-        matchedVia = variation;
-        matchLocation = 'Skills Section';
-        break;
+      const v = variation.toLowerCase().trim();
+
+      // Skip overly short variations unless explicitly allowed (reduce false positives)
+      const allowedShort = new Set(['c#', 'c++', 'js', 'ts ', 'r', 'go', 'ai', 'sql', 'aws', 'gcp']);
+      if (v.length <= 2 && !allowedShort.has(v)) continue;
+
+      try {
+        const pattern = variationToRegex(v);
+        if (pattern.test(normalizedText)) {
+          found = true;
+          matchedVia = variation;
+          matchLocation = 'Skills Section';
+          break;
+        }
+      } catch (err) {
+        // Fallback: if regex build fails, skip this variation
+        continue;
       }
     }
     
     // Fallback: Search in full resume if not found in skills section
     if (!found && skillsSection) {
-      for (const variation of variations) {
-        const wordBoundaryPattern = new RegExp(`\\b${escapeRegex(variation)}\\b`, 'i');
-        if (wordBoundaryPattern.test(fullNormalizedText)) {
-          found = true;
-          matchedVia = variation;
-          matchLocation = 'Full Resume';
-          break;
+        for (const variation of variations) {
+          const v = variation.toLowerCase().trim();
+
+          const allowedShort = new Set(['c#', 'c++', 'js', 'ts', 'r', 'go', 'ai', 'sql', 'aws', 'gcp']);
+          if (v.length <= 2 && !allowedShort.has(v)) continue;
+
+          try {
+            const pattern = variationToRegex(v);
+            if (pattern.test(fullNormalizedText)) {
+              found = true;
+              matchedVia = variation;
+              matchLocation = 'Full Resume';
+              break;
+            }
+          } catch (err) {
+            continue;
+          }
         }
-        
-        if (fullNormalizedText.includes(variation.toLowerCase())) {
-          found = true;
-          matchedVia = variation;
-          matchLocation = 'Full Resume';
-          break;
-        }
-      }
     }
     
     if (found) {
@@ -497,6 +501,19 @@ function getAllSkillVariations(skill) {
  */
 function escapeRegex(string) {
   return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+/**
+ * Build a regex for a skill variation that respects word/token boundaries
+ * and allows common separators (space, dash, dot, slash, underscore) between tokens.
+ */
+function variationToRegex(variation) {
+  // split on common separators
+  const tokens = variation.split(/[\s\.\-\/ _]+/).filter(Boolean);
+  if (tokens.length === 0) throw new Error('Empty variation');
+  const escaped = tokens.map(t => escapeRegex(t));
+  const body = escaped.join('[\\s\\-\\./_]*');
+  return new RegExp(`\\b${body}\\b`, 'i');
 }
 
 /**
